@@ -45,7 +45,7 @@ class VizualLib:
         mask[np.triu_indices_from(mask)] = True
 
         fig, ax = plt.subplots(figsize=figsize)
-        seaborn.heatmap(self.__data.corr(), linewidths=linewidths, square=square, cmap="BuGn",
+        seaborn.heatmap(self.__data.corr(), linewidths=linewidths, square=square, cmap=cmap,
                         linecolor=linecolor, annot=True, annot_kws=annot_kws, mask=mask, cbar_kws={"shrink": .5}, ax=ax,
                         fmt=fmt, **kwargs)
 
